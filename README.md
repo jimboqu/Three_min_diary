@@ -1,24 +1,18 @@
-# README
+# Three Minute Diary
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a diary application based on the Three Minute Diary concept. 
 
-Things you may want to cover:
+It will contain that days date, various sections to add in, authentication, and a bunch of self-help quotes that will be added by a seed file. 
 
-* Ruby version
+## Sections will be
 
-* System dependencies
+3 things I am grateful for
 
-* Configuration
+3 things that would make today great. 
 
-* Database creation
+Daily affirmation
 
-* Database initialization
+Amazing things that happened today
 
-* How to run the test suite
+How could I have done better 
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
