@@ -4,7 +4,7 @@ class DaysController < ApplicationController
   # GET /days
   # GET /days.json
   def index
-    @days = Day.all
+    @days = Day.where(user_id: current_user.id)
   end
 
   # GET /days/1
@@ -14,7 +14,7 @@ class DaysController < ApplicationController
 
   # GET /days/new
   def new
-    @day = Day.new
+    @day = current_user.days.build
   end
 
   # GET /days/1/edit
@@ -24,7 +24,7 @@ class DaysController < ApplicationController
   # POST /days
   # POST /days.json
   def create
-    @day = Day.new(day_params)
+    @day = current_user.days.build(day_params)
 
     respond_to do |format|
       if @day.save
@@ -61,6 +61,9 @@ class DaysController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_day
       @day = Day.find(params[:id])
+      if @day.user_id != current_user.id
+        redirect_to root_path
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
