@@ -16,3 +16,13 @@ Amazing things that happened today
 
 How could I have done better 
 
+## Things to add
+
+Email reminder if you haven't added anything
+
+Calendar to home page. 
+
+Add in random daily affirmation. 
+
+
+
