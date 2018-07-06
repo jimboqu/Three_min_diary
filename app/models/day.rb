@@ -6,4 +6,8 @@ class Day < ApplicationRecord
   validates :daily, presence: true, length: {minimum: 20}
   validates :effort, presence: true, length: {minimum: 20}
   validates :improvement, presence: true, length: {minimum: 20}
+
+  def self.stub
+  	"hello world"
+  end
 end

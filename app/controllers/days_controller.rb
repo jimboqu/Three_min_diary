@@ -1,5 +1,6 @@
 class DaysController < ApplicationController
   before_action :set_day, only: [:show, :edit, :update, :destroy]
+  before_action :quote, only: [:new, :index]
 
   # GET /days
   # GET /days.json
@@ -64,6 +65,10 @@ class DaysController < ApplicationController
       if @day.user_id != current_user.id
         redirect_to root_path
       end
+    end
+
+    def quote
+      @quote = Motivator.quoteget
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
