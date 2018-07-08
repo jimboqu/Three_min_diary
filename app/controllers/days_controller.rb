@@ -31,6 +31,7 @@ class DaysController < ApplicationController
       if @day.save
         format.html { redirect_to @day, notice: 'Day was successfully created.' }
       else
+        @quote = Motivator.quoteget
         format.html { render :new }
       end
     end
